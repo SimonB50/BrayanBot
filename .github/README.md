@@ -14,9 +14,9 @@
 
 <div align="center">
     <img src="https://img.shields.io/badge/discord.js-v14-7354F6?logo=discord&logoColor=white&style=flat-square" />
-    <img src="https://img.shields.io/github/stars/neushore/bryanbot.svg?logo=github&style=flat-square" />
-    <img src="https://img.shields.io/github/license/neushore/bryanbot.svg?logo=github&style=flat-square" />
-    <img src="https://img.shields.io/github/actions/workflow/status/neushore/bryanbot/nodejs.yml?branch=v2?label=test&logo=circleci&style=flat-square" />
+    <img src="https://img.shields.io/github/stars/59L/BryanBot.svg?logo=github&style=flat-square" />
+    <img src="https://img.shields.io/github/license/59L/BryanBot.svg?logo=github&style=flat-square" />
+    <img src="https://img.shields.io/github/actions/workflow/status/59L/BryanBot/nodejs.yml?branch=v2?label=test&logo=circleci&style=flat-square" />
 </div>
 
 <h2 align="center">📢 About BrayanBot</h2>
@@ -44,13 +44,13 @@ We welcome all kinds of contributions. Feel free to open a pull request for any 
 
 #### Discussion & Suggestions
 
-We believe there is no such thing as a stupid idea! Which means, you may feel **absolutely free** to request any features over [Issues](https://github.com/DevAutomating/BrayanBot/issues) or our [Discord Server](https://discord.gg/automating). While new commands most likely to make it to the bot, suggest them anyway! There is a high chance that they can become implemented as [Addons](https://BrayanBot.dev/docs/Developers/Addons/first-party)
+We believe there is no such thing as a stupid idea! Which means, you may feel **absolutely free** to request any features over [Issues](https://github.com/59L/BrayanBot/issues) or our [Discord Server](https://discord.gg/automating). While new commands are not likely to make it to the bot, suggest them anyway! There is a high chance that they can become implemented as [Addons](https://BrayanBot.dev/docs/Developers/Addons/first-party)
 
 #### Code Contributions
 
-If you consider yourself proficient in JavaScript, then feel free to contribute new features by [Forking this repository](https://github.com/DevAutomating/BrayanBot/fork). Or if you are interested in creating your own [Addons](https://brayanbot.dev/Developers/Addons/creating-addons), make sure you have read the necessary development. Feel free to hop in our Discord Server for development support.
+If you consider yourself proficient in JavaScript, then feel free to contribute new features by [Forking this repository](https://github.com/59L/BrayanBot/fork). Or if you are interested in creating your own [Addons](https://brayanbot.dev/Developers/Addons/creating-addons), make sure you have read the necessary development. Feel free to hop in our Discord Server for development support.
 
-> If you would like to make a contribution, we kindly ask that you respect our [Contribution Guidelines](https://github.com/DevAutomating/BrayanBot/blob/main/.github/CONTRUBUTING.md) while doing so.
+> If you would like to make a contribution, we kindly ask that you respect our [Contribution Guidelines](https://github.com/59L/BrayanBot/blob/v2/.github/CONTRUBUTING.md) while doing so.
 
 #### Translations
 
@@ -58,12 +58,10 @@ We do not yet have a streamlined system for Translations, however, if you have t
 
 #### Bug Reports
 
-There's a fly in your room? Found a command that nukes your entire operating system when ran? Then you should _definitely_ consider opening a [Bug Report](https://github.com/DevAutomating/BrayanBot/issues) or reporting said bug over [Discord](https://discord.gg/automating). We make sure everything is fixed as soon as possible and no bugs ever get to you. You report em', we squash em'
-
-####
+There's a fly in your room? Found a command that nukes your entire operating system when ran? Then you should _definitely_ consider opening a [Bug Report](https://github.com/59L/BrayanBot/issues) or reporting said bug over [Discord](https://discord.gg/automating). We make sure everything is fixed as soon as possible and no bugs ever get to you. You report em', we squash em'
 
 ## Our Awesome Contributors
 
-<a href="https://github.com/tors-img.web.app/image?repo=DevAutomating/BrayanBot-ordered list/BrayanBot-c2/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=DevAutomating/BrayanBot" width="150"/>
+<a href="https://github.com/59L/BrayanBot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=59L/BrayanBot" height="50" />
 </a>
