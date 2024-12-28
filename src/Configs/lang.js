@@ -40,12 +40,12 @@ const defaultConfig = {
       {
         Author: "{brand-name}",
         AuthorIcon: "{brand-logo}",
-        Description: "> [**NeuShore's Website**]({brand-link})",
+        Description: "> [**BrayanBot's Website**]({brand-link})",
         Fields: [
           {
             Name: "📖 Open Source",
             Value:
-              "> This bot's base is open source, you can find the source code [here](https://github.com/DevAutomating/BrayanBot).",
+              "> This bot's base is open source, you can find the source code [here](https://github.com/59L/BrayanBot).",
           },
           {
             Name: "⚡ Blazing fast!",

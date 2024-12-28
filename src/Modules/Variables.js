@@ -103,7 +103,7 @@ const botVariables = (bot, prefix = "bot") => {
         replaceWith: "<@" + bot.user?.id + ">",
     }, {
         searchFor: new RegExp(`{${prefix}-pfp}`, "g"),
-        replaceWith: bot.user?.displayAvatarURL({ forceStatic: false }) ?? "https://avatars.githubusercontent.com/u/99198112",
+        replaceWith: bot.user?.displayAvatarURL({ forceStatic: false }) ?? "https://i.imgur.com/ptTG24J.png",
     }]
 }
 

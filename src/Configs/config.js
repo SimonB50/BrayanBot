@@ -58,8 +58,8 @@ const defaultConfig = {
   Branding: {
     Name: "BryanBot",
     Color: "#2f3136",
-    Link: "https://neushore.dev",
-    Logo: "https://avatars.githubusercontent.com/u/99198112",
+    Link: "https://github.com/59L/BrayanBot",
+    Logo: "https://i.imgur.com/ptTG24J.png",
   },
   "~l1": "Empty Line",
   ActivityStatus: {
@@ -72,8 +72,8 @@ const defaultConfig = {
       },
       {
         Type: "STREAMING",
-        Text: "neushore.dev",
-        URL: "https://neushore.dev",
+        Text: "BrayanBot",
+        URL: "https://github.com/59L/BrayanBot",
       },
       {
         Type: "LISTENING",

@@ -22,10 +22,10 @@ export class CommandHandler {
   /** @param {BryanBot} manager @param {string} commandDir */
   constructor(manager, commandDir) {
     if (!manager)
-      throw new Error("[NeuShore/CommandHandler] Missing manager parameter.");
+      throw new Error("[CommandHandler] Missing manager parameter.");
     if (!commandDir)
       throw new Error(
-        "[NeuShore/CommandHandler] Missing commandDir parameter."
+        "[CommandHandler] Missing commandDir parameter."
       );
 
     this.manager = manager;
