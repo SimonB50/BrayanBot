@@ -100,8 +100,8 @@ const defaultConfig = {
                 Name: "• Information",
                 Value: [
                   "> [**BryanBot's Website**]({brand-link})",
-                  "> [**BryanBot's GitHub**](https://github.com/DevAutomating/BrayanBot)",
-                  "> [**BryanBot's Discord**](https://discord.gg/Automating)",
+                  "> [**BryanBot's GitHub**](https://github.com/59L/BrayanBot)",
+                  "> [**BryanBot's Discord**](https://discord.gg/GvyuDDFeZU)",
                 ].join("\n"),
               },
               {

@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://i.imgur.com/ptTG24J.png" alt="Logo"  width="200">
   <h1>BrayanBot</h1>
-  <a href="https://discord.gg/automating/">
+  <a href="https://discord.gg/GvyuDDFeZU">
     <img border="0" alt="Discord" src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
   </a>
   <a href="https://www.javascript.com/">
@@ -28,23 +28,23 @@ It holds the intention of being as fast as lightweight as possible out of the bo
 entirely to their own liking. With so little hard-coded commands, BrayanBot is _the_ Discord bot of your dreams.
 
 BrayanBot is currently going through its V2 rework and is actively looking for new features and ideas to make it better. If you have any ideas for BrayanBot V2,
-please feel free to join our [Discord Server](https://discord.gg/automating) and let us know. If you are interested in contributing to the codebase with your ideas,
+please feel free to join our [Discord Server](https://discord.gg/GvyuDDFeZU) and let us know. If you are interested in contributing to the codebase with your ideas,
 please make an issue or a pull request. We always appreciate any and all contributions.
 
 <h2 align="center">✨ Contributing</h2>
 
 ---
 
-**We think everyone should be able to contribute to BrayanBot**, so we have listed below the list of ways in which you can contribute to BrayanBot. For any questions, don't hesitate to ask them in our [Support Server](https://discord.gg/automating).
+**We think everyone should be able to contribute to BrayanBot**, so we have listed below the list of ways in which you can contribute to BrayanBot. For any questions, don't hesitate to ask them in our [Support Server](https://discord.gg/GvyuDDFeZU).
 
 We welcome all kinds of contributions. Feel free to open a pull request for any code contributions, or an issue for feature requests and support.
 
-> Before creating an issue, please ensure that it hasn't already been reported/suggested, and double-check the [F.A.Q](https://automating.pw/) to make sure.
+> Before creating an issue, please ensure that it hasn't already been reported/suggested to make sure.
 > And if you have a question, please ask it in the Discord server instead of opening an issue.
 
 #### Discussion & Suggestions
 
-We believe there is no such thing as a stupid idea! Which means, you may feel **absolutely free** to request any features over [Issues](https://github.com/59L/BrayanBot/issues) or our [Discord Server](https://discord.gg/automating). While new commands are not likely to make it to the bot, suggest them anyway! There is a high chance that they can become implemented as [Addons](https://BrayanBot.dev/docs/Developers/Addons/first-party)
+We believe there is no such thing as a stupid idea! Which means, you may feel **absolutely free** to request any features over [Issues](https://github.com/59L/BrayanBot/issues) or our [Discord Server](https://discord.gg/GvyuDDFeZU). While new commands are not likely to make it to the bot, suggest them anyway! There is a high chance that they can become implemented as [Addons](https://BrayanBot.dev/docs/Developers/Addons/first-party)
 
 #### Code Contributions
 
@@ -58,7 +58,7 @@ We do not yet have a streamlined system for Translations, however, if you have t
 
 #### Bug Reports
 
-There's a fly in your room? Found a command that nukes your entire operating system when ran? Then you should _definitely_ consider opening a [Bug Report](https://github.com/59L/BrayanBot/issues) or reporting said bug over [Discord](https://discord.gg/automating). We make sure everything is fixed as soon as possible and no bugs ever get to you. You report em', we squash em'
+There's a fly in your room? Found a command that nukes your entire operating system when ran? Then you should _definitely_ consider opening a [Bug Report](https://github.com/59L/BrayanBot/issues) or reporting said bug over [Discord](https://discord.gg/GvyuDDFeZU). We make sure everything is fixed as soon as possible and no bugs ever get to you. You report em', we squash em'
 
 ## Our Awesome Contributors
 

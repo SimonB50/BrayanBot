@@ -21,14 +21,14 @@ We do have an unit test to cover most of BryanBot's functionality and we always 
 
 #### Submitting changes
 
-- If you're unable to find an open issue, [open a new one](https://github.com/DevAutomating/BrayanBot/issues/new). Be sure to include a **title, a clear description of your idea or issue** and give as much relevant information as possible.
-- Open a new [GitHub Pull Request to BryanBot](https://github.com/DevAutomating/BrayanBot/pulls) with a clear list of what you've done (read more about [pull requests](http://help.github.com/pull-requests/)). Include the relevant issue number if applicable.
+- If you're unable to find an open issue, [open a new one](https://github.com/59L/BrayanBot/issues/new). Be sure to include a **title, a clear description of your idea or issue** and give as much relevant information as possible.
+- Open a new [GitHub Pull Request to BryanBot](https://github.com/59L/BrayanBot/pulls) with a clear list of what you've done (read more about [pull requests](http://help.github.com/pull-requests/)). Include the relevant issue number if applicable.
 
 **Unsure where to begin contributing? You can start by looking through these issues labels:**
 
-- [Enhancement issues](https://github.com/DevAutomating/BrayanBot/labels/enhancement)
-- [Bug issues](https://github.com/DevAutomating/BrayanBot/labels/bug)
-- [Documentation issues](https://github.com/DevAutomating/BrayanBot/labels/documentation)
+- [Enhancement issues](https://github.com/59L/BrayanBot/labels/enhancement)
+- [Bug issues](https://github.com/59L/BrayanBot/labels/bug)
+- [Documentation issues](https://github.com/59L/BrayanBot/labels/documentation)
 
 ### Use a Consistent Coding Style
 
@@ -93,4 +93,4 @@ If I myself violate the code of conduct, no such possibility exists. Thus, it is
 
 This code of conduct may be changed in order to enhance clarity and precision at any time, typically without notification.
 
-**Last revised: 22/01/2022 by [@NotAShelf](https://github.com/NotAShelf)**
+**Last revised: 28/12/2024 by [@SimonB50](https://github.com/SimonB50)**
