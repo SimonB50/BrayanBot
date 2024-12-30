@@ -31,7 +31,7 @@ const CommandInterface = {
   commandConfig: CommandConfig,
   /**
    * @param {BryanBot} manager @param {Message} message @param {String[]} args
-   * @param {String} prefixUsed @param {String} commandData */
+   * @param {String} prefixUsed @param {CommandData} commandData */
   LegacyRun: (manager, message, args, prefixUsed, commandData) => {},
   /**
    * @param {BryanBot} manager @param {ChatInputCommandInteraction} interaction
