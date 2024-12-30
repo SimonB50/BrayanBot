@@ -1,5 +1,5 @@
 import { SlashCommandOption } from "../../Utils/setupSlashCommand.js";
-import { Message, ChatInputCommandInteraction } from "discord.js";
+import { Message, ChatInputCommandInteraction, AutocompleteInteraction } from "discord.js";
 import { BryanBot } from "../BryanBot.js";
 
 const CommandConfig = {
