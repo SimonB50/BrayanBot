@@ -72,7 +72,7 @@ const defaultConfig = {
       },
       {
         Type: "STREAMING",
-        Text: "BrayanBot",
+        Text: "BryanBot",
         URL: "https://github.com/59L/BrayanBot",
       },
       {

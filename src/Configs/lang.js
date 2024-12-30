@@ -40,7 +40,7 @@ const defaultConfig = {
       {
         Author: "{brand-name}",
         AuthorIcon: "{brand-logo}",
-        Description: "> [**BrayanBot's Website**]({brand-link})",
+        Description: "> [**BryanBot's Website**]({brand-link})",
         Fields: [
           {
             Name: "📖 Open Source",

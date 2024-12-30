@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://i.imgur.com/ptTG24J.png" alt="Logo"  width="200">
-  <h1>BrayanBot</h1>
+  <h1>BryanBot</h1>
   <a href="https://discord.gg/GvyuDDFeZU">
     <img border="0" alt="Discord" src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
   </a>
@@ -19,15 +19,15 @@
     <img src="https://img.shields.io/github/actions/workflow/status/59L/BryanBot/nodejs.yml?branch=v2?label=test&logo=circleci&style=flat-square" />
 </div>
 
-<h2 align="center">📢 About BrayanBot</h2>
+<h2 align="center">📢 About BryanBot</h2>
 
 ---
 
-BrayanBot is a free (and open source), addon-oriented, actively maintained base Discord bot for Developers and Community Managers alike.
+BryanBot is a free (and open source), addon-oriented, actively maintained base Discord bot for Developers and Community Managers alike.
 It holds the intention of being as fast as lightweight as possible out of the box, while allowing users to customize the bot (or fork it!)
-entirely to their own liking. With so little hard-coded commands, BrayanBot is _the_ Discord bot of your dreams.
+entirely to their own liking. With so little hard-coded commands, BryanBot is _the_ Discord bot of your dreams.
 
-BrayanBot is currently going through its V2 rework and is actively looking for new features and ideas to make it better. If you have any ideas for BrayanBot V2,
+BryanBot is currently going through its V2 rework and is actively looking for new features and ideas to make it better. If you have any ideas for BryanBot V2,
 please feel free to join our [Discord Server](https://discord.gg/GvyuDDFeZU) and let us know. If you are interested in contributing to the codebase with your ideas,
 please make an issue or a pull request. We always appreciate any and all contributions.
 
@@ -35,7 +35,7 @@ please make an issue or a pull request. We always appreciate any and all contrib
 
 ---
 
-**We think everyone should be able to contribute to BrayanBot**, so we have listed below the list of ways in which you can contribute to BrayanBot. For any questions, don't hesitate to ask them in our [Support Server](https://discord.gg/GvyuDDFeZU).
+**We think everyone should be able to contribute to BryanBot**, so we have listed below the list of ways in which you can contribute to BryanBot. For any questions, don't hesitate to ask them in our [Support Server](https://discord.gg/GvyuDDFeZU).
 
 We welcome all kinds of contributions. Feel free to open a pull request for any code contributions, or an issue for feature requests and support.
 
