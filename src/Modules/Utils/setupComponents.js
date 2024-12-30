@@ -76,6 +76,11 @@ const setupComponents = (settings) => {
                     let Emoji = component.Emoji || null;
                     let Link = component.Link || null;
 
+                    if (!CustomID && !Link) {
+                        throw new Error(`Component requires either CustomID or Link to build button.`);
+                    }
+                    
+
                     if (variables && variables[0]) {
                         if (Style && typeof Style === "string") Style = Utils.applyVariables(Style, variables);
                         if (Label && typeof Label === "string") Label = Utils.applyVariables(Label, variables);
