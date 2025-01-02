@@ -51,13 +51,13 @@ const setupMessage = (settings) => {
       {
         searchFor: /{brand-link}/g,
         replaceWith:
-          manager.configs.config?.Branding.Link || "https://neushore.dev",
+          manager.configs.config?.Branding.Link || "https://github.com/59L/BrayanBot",
       },
       {
         searchFor: /{brand-logo}/g,
         replaceWith:
           manager.configs.config?.Branding.Logo ||
-          "https://avatars.githubusercontent.com/u/99198112",
+          "https://i.imgur.com/ptTG24J.png",
       },
     ]
   );

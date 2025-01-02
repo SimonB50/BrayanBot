@@ -13,9 +13,9 @@ export class EventHandler {
    */
   constructor(manager, eventDir) {
     if (!manager)
-      throw new Error("[NeuShore/EventHandler] Missing manager parameter.");
+      throw new Error("[EventHandler] Missing manager parameter.");
     if (!eventDir)
-      throw new Error("[NeuShore/EventHandler] Missing eventDir parameter.");
+      throw new Error("[EventHandler] Missing eventDir parameter.");
 
     this.manager = manager;
     this.eventDir = eventDir;

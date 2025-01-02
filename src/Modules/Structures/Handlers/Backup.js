@@ -17,9 +17,9 @@ export class BackupHandler {
   /** @param {BryanBot} manager @param {string} backupDir @param {string[]} filePathsToBackup*/
   constructor(manager, backupDir, filePathsToBackup) {
     if (!manager)
-      throw new Error("[NeuShore/BackupHandler] Missing manager parameter.");
+      throw new Error("[BackupHandler] Missing manager parameter.");
     if (!backupDir)
-      throw new Error("[NeuShore/BackupHandler] Missing backupDir parameter.");
+      throw new Error("[BackupHandler] Missing backupDir parameter.");
 
     this.manager = manager;
     this.backupDir = backupDir;

@@ -13,9 +13,9 @@ export class ConfigHandler {
   /** @param {BryanBot} manager @param {string} configDir */
   constructor(manager, configDir) {
     if (!manager)
-      throw new Error("[NeuShore/ConfigHandler] Missing manager parameter.");
+      throw new Error("[ConfigHandler] Missing manager parameter.");
     if (!configDir)
-      throw new Error("[NeuShore/ConfigHandler] Missing configDir parameter.");
+      throw new Error("[ConfigHandler] Missing configDir parameter.");
 
     this.manager = manager;
     this.configDir = configDir;
@@ -59,10 +59,10 @@ export class Config {
   constructor(storagePath, configData) {
     if (!storagePath)
       throw new Error(
-        "[NeuShore/ConfigHandler] storagePath manager parameter."
+        "[ConfigHandler] storagePath manager parameter."
       );
     if (!configData)
-      throw new Error("[NeuShore/ConfigHandler] configData manager parameter.");
+      throw new Error("[ConfigHandler] configData manager parameter.");
 
     this.storagePath = storagePath;
     this.configData = configData;

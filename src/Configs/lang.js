@@ -40,12 +40,12 @@ const defaultConfig = {
       {
         Author: "{brand-name}",
         AuthorIcon: "{brand-logo}",
-        Description: "> [**NeuShore's Website**]({brand-link})",
+        Description: "> [**BryanBot's Website**]({brand-link})",
         Fields: [
           {
             Name: "📖 Open Source",
             Value:
-              "> This bot's base is open source, you can find the source code [here](https://github.com/DevAutomating/BrayanBot).",
+              "> This bot's base is open source, you can find the source code [here](https://github.com/59L/BrayanBot).",
           },
           {
             Name: "⚡ Blazing fast!",
@@ -100,8 +100,8 @@ const defaultConfig = {
                 Name: "• Information",
                 Value: [
                   "> [**BryanBot's Website**]({brand-link})",
-                  "> [**BryanBot's GitHub**](https://github.com/DevAutomating/BrayanBot)",
-                  "> [**BryanBot's Discord**](https://discord.gg/Automating)",
+                  "> [**BryanBot's GitHub**](https://github.com/59L/BrayanBot)",
+                  "> [**BryanBot's Discord**](https://discord.gg/GvyuDDFeZU)",
                 ].join("\n"),
               },
               {

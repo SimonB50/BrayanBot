@@ -16,9 +16,9 @@ export class AddonHandler {
   /** @param {BryanBot} manager @param {string} addonDir */
   constructor(manager, addonDir) {
     if (!manager)
-      throw new Error("[NeuShore/AddonHandler] Missing manager parameter.");
+      throw new Error("[AddonHandler] Missing manager parameter.");
     if (!addonDir)
-      throw new Error("[NeuShore/AddonHandler] Missing addonDir parameter.");
+      throw new Error("[AddonHandler] Missing addonDir parameter.");
 
     this.manager = manager;
     this.addonDir = addonDir;

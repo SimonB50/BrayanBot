@@ -4,10 +4,10 @@
 #  - XCraftMan52 <lucas@lucaswebber.net>
 
 services:
-  brayanbot:
+  bryanbot:
     tty: true
     working_dir: /opt/bryanbot
-    image: Neushore/BryanBot:latest
+    image: Neushore/BrayanBot:latest
     command: pnpm start
     container_name: BryanBot
     restart: unless-stopped
