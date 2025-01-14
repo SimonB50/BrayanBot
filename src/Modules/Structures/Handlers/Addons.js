@@ -15,8 +15,7 @@ export class AddonHandler {
 
   /** @param {BryanBot} manager @param {string} addonDir */
   constructor(manager, addonDir) {
-    if (!manager)
-      throw new Error("[AddonHandler] Missing manager parameter.");
+    if (!manager) throw new Error("[AddonHandler] Missing manager parameter.");
     if (!addonDir)
       throw new Error("[AddonHandler] Missing addonDir parameter.");
 
@@ -38,29 +37,22 @@ export class AddonHandler {
         path.join(this.addonDir, this.addonDirFiles[i])
       ).isDirectory();
 
-      if (isDir) {
-        const dirFiles = readdirSync(
-          path.join(this.addonDir, this.addonDirFiles[i])
-        ).filter((x) => x.endsWith(".js"));
-        await this.initialize(dirFiles);
-      } else {
-        const { default: addon } = await import(
-          `file://` + path.join(this.addonDir, this.addonDirFiles[i])
+      const { default: addon } = await import(
+        `file://` + path.join(this.addonDir, this.addonDirFiles[i], isDir ? "index.js" : "")
+      );
+
+      try {
+        await addon.execute(this.manager);
+        if (addon.log)
+          console.log(chalk.yellowBright.bold("[ADDON]"), ...addon.log);
+      } catch (e) {
+        Utils.logger.error(
+          `An error has occurred executing '${addon.name}' addon!`
         );
-
-        try {
-          await addon.execute(this.manager);
-          if (addon.log)
-            console.log(chalk.yellowBright.bold("[ADDON]"), ...addon.log);
-        } catch (e) {
-          Utils.logger.error(
-            `An error has occurred executing '${addon.name}' addon!`
-          );
-          Utils.logger.error(e);
-        }
-
-        this.manager.addons.set(addon.name, addon);
+        Utils.logger.error(e);
       }
+
+      this.manager.addons.set(addon.name, addon);
     }
 
     return this;
