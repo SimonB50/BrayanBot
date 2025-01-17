@@ -1,22 +1,61 @@
 import { ChannelType, TextChannel, VoiceChannel, CategoryChannel, DMChannel, Guild, Role, GuildMember } from "discord.js";
-import { botVariables, channelVariables, guildVariables, roleVariables, userVariables } from "./Variables.js"
+import { botVariables, channelVariables, guildVariables, roleVariables, userVariables, createVariable } from "./Variables.js"
 import { setupSlashCommand } from "./Utils/setupSlashCommand.js";
 import { setupMessage } from "./Utils/setupMessage.js";
 import { loadCommands } from "./Utils/loadCommands.js";
 import chalk from "chalk";
 
+
+const isHexColor = function (str) {
+    return /^#?([0-9A-Fa-f]{3}){1,2}$/i.test(str);
+}
+
+const formatColor = function (string) {
+    const hexRegex = /#?([0-9A-Fa-f]{3,6})\{([^}]*)\}/g;
+    string = string.replace(hexRegex, (match, color, text) => {
+        if (isHexColor(color)) {
+            return chalk.hex(color)(text);
+        }
+        return text;
+    });
+
+    const colorRegex = /(\w+)(?:_bold)?\{([^}]*)\}/g;
+    return string.replace(colorRegex, (match, color, text) => {
+        switch (color) {
+            case 'prefix':
+                return `${chalk.grey('[')}${chalk.greenBright(text)}${chalk.grey(']')}`;
+            case 'warn':
+                return chalk.hex("eda634").bold(text);
+            default:
+                const baseColor = color.replace('_bold', '');
+                const applyBold = color.endsWith('_bold');
+                if (isHexColor(color)) {
+                    return chalk.hex(color)(text);
+                } else if (chalk[baseColor]) {
+                    return applyBold ? chalk[baseColor].bold(text) : chalk[baseColor](text);
+                }
+                return text;
+        }
+    });
+}
+
 export default {
     logger: {
-        debug: (...text) => process.argv.includes("--debug") && console.log(chalk.magentaBright.bold("[DEBUG]"), ...text),
-        info: (...text) => console.log(chalk.greenBright.bold("[INFO]"), ...text),
-        warn: (...text) => console.log(chalk.yellowBright.bold("[WARN]"), ...text),
-        error: (...text) => console.log(chalk.redBright.bold("[ERROR]"), ...text),
+        debug: (...text) => process.argv.includes("--debug") && console.log(chalk.magentaBright.bold("[DEBUG]"), ...text.map(x => formatColor(x))),
+        info: (...text) => console.log(chalk.greenBright.bold("[INFO]"), ...text.map(x => formatColor(x))),
+        warn: (...text) => console.log(chalk.yellowBright.bold("[WARN]"), ...text.map(x => formatColor(x))),
+        error: (...text) => console.log(chalk.redBright.bold("[ERROR]"), ...text.map(x => formatColor(x))),
     },
+
+    // New logging methods
+    formatColor: formatColor,
+    isHexColor: isHexColor,
 
     loadCommands: loadCommands,
     setupMessage: setupMessage,
     setupSlashCommand: setupSlashCommand,
 
+    createVariable: createVariable,
     botVariables: botVariables,
     userVariables: userVariables,
     roleVariables: roleVariables,
