@@ -5,46 +5,48 @@ import { setupMessage } from "./Utils/setupMessage.js";
 import { loadCommands } from "./Utils/loadCommands.js";
 import chalk from "chalk";
 
-
-const isHexColor = function (str) {
-    return /^#?([0-9A-Fa-f]{3}){1,2}$/i.test(str);
-}
-
+// test
 const formatColor = function (string) {
-    const hexRegex = /#?([0-9A-Fa-f]{3,6})\{([^}]*)\}/g;
-    string = string.replace(hexRegex, (match, color, text) => {
-        if (isHexColor(color)) {
-            return chalk.hex(color)(text);
-        }
-        return text;
-    });
+    const processNestedColors = (input) => {
+        const regex = /(\w+|#[0-9A-Fa-f]{3,6})\{([^{}]*)\}/g;
+        let hasNestedMatch = false;
 
-    const colorRegex = /(\w+)(?:_bold)?\{([^}]*)\}/g;
-    return string.replace(colorRegex, (match, color, text) => {
-        switch (color) {
-            case 'prefix':
-                return `${chalk.grey('[')}${chalk.greenBright(text)}${chalk.grey(']')}`;
-            case 'warn':
-                return chalk.hex("eda634").bold(text);
-            default:
-                const baseColor = color.replace('_bold', '');
-                const applyBold = color.endsWith('_bold');
-                if (isHexColor(color)) {
-                    return chalk.hex(color)(text);
-                } else if (chalk[baseColor]) {
-                    return applyBold ? chalk[baseColor].bold(text) : chalk[baseColor](text);
-                }
-                return text;
-        }
-    });
+        const formattedString = input.replace(regex, (match, color, text) => {
+            hasNestedMatch = true;
+
+            switch (color) {
+                case 'prefix':
+                    return `${chalk.grey('[')}${chalk.greenBright(text)}${chalk.grey(']')}`;
+                case 'warn':
+                    return chalk.hex("eda634").bold(text);
+                default:
+                    const baseColor = color.replace('_bold', '');
+                    const applyBold = color.endsWith('_bold');
+                    if (isHexColor(color)) {
+                        return chalk.hex(color)(text);
+                    } else if (chalk[baseColor]) {
+                        return applyBold ? chalk[baseColor].bold(text) : chalk[baseColor](text);
+                    }
+                    return text;
+            }
+        });
+
+        return hasNestedMatch ? processNestedColors(formattedString) : formattedString;
+    };
+    return processNestedColors(string);
+};
+
+function isHexColor(color) {
+    return /^#?([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/.test(color);
 }
 
 export default {
-    logger: {
+    logger: { 
         debug: (...text) => process.argv.includes("--debug") && console.log(chalk.magentaBright.bold("[DEBUG]"), ...text.map(x => formatColor(x))),
         info: (...text) => console.log(chalk.greenBright.bold("[INFO]"), ...text.map(x => formatColor(x))),
         warn: (...text) => console.log(chalk.yellowBright.bold("[WARN]"), ...text.map(x => formatColor(x))),
         error: (...text) => console.log(chalk.redBright.bold("[ERROR]"), ...text.map(x => formatColor(x))),
+        addon: (...text) => console.log(chalk.yellowBright.bold("[ADDON]"), ...text.map(x => formatColor(x))),
     },
 
     // New logging methods
@@ -184,7 +186,13 @@ export default {
             .filter(([badge, _]) => member.user.flags?.has(badge))
             .map(([_, value]) => value);
     },
-
+    /**
+     * Retrieves a user from a message based on the provided arguments.
+     * @param {Message} message - The message object to extract user information from.
+     * @param {number} [arg=0] - The argument index in the message content to search for the user.
+     * @param {boolean} [checkFull=false] - Whether to use the full message content as the search string.
+     * @returns {GuildMember|null} The found user as a GuildMember or null if no match is found.
+     */
     getUserFromMessage(message, arg = 0, checkFull = false) {
         const args = message.content.split(" "); args.shift();
         const toFind = checkFull ? args.join(" ") : (args[arg] || '');
@@ -196,5 +204,30 @@ export default {
                 || member.user.username.toLowerCase() == toFind.toLowerCase()
                 || member.id == toFind.replace(/([<@!]|[>])/g, "")
             );
+    },
+    /**
+     * Resolves a channel type to a human-readable name.
+     * @param {ChannelType} channelType - The type of the channel to resolve.
+     * @returns {string} The human-readable name of the channel type.
+     */
+    resolveChannelTypeName: (channelType) => {
+        switch (channelType) {
+            case ChannelType.GuildText:
+                return "Text Channel";
+            case ChannelType.GuildVoice:
+                return "Voice Channel";
+            case ChannelType.GuildCategory:
+                return "Category";
+            case ChannelType.GuildAnnouncement:
+                return "Announcement Channel";
+            case ChannelType.GuildStageVoice:
+                return "Stage Channel";
+            case ChannelType.GuildForum:
+                return "Forum Channel";
+            case ChannelType.GuildDirectory:
+                return "Directory Channel";
+            default:
+                return "Unknown Channel Type";
+        }
     },
 }
